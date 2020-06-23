@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+# TokoHardware
+Project Tugas Akhir Pemrogamman Sistem Informasi
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
@@ -85,6 +88,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 =======
-# TokoHardware
-Project Tugas Akhir Pemrogamman Sistem Informasi
 >>>>>>> cc4508d55f96f45104d016a489d77ff271006856

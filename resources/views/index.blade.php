@@ -39,8 +39,69 @@
     <div class="konten">
         <div class="container mx-auto">
             <div class="recommned-ram">
-                <h3 class="mt-5 font-medium text-xl">Rekomendasi Processor</h3>
-                <div class="flex mt-3">
+                <h3 class="mt-5 font-medium text-xl">Popular Processor</h3>
+                <div class="grid lg:grid-cols-5 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-200 p-4 m-4 rounded-lg">
+                        <div>
+                            <img src="{{ asset('upload/productImg/ryzen.png') }}" alt="" class="w-56">
+                        </div>
+                        <div class="px-3 py-2">
+                            <div>
+                            <h4>AMD Ryzen 5 3400G</h4>
+                            <h4 class="font-medium text-green-500">Rp 2.599.000</h4>
+                            <h4>Stock: 10</h4>
+                        </div>
+                        <div class="p-2 m-2 bg-orange-500 text-center rounded-lg font-medium hover:bg-orange-600 hover:text-white">
+                            Add to cart
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-200 p-4 m-4 rounded-lg">
+                        <div>
+                            <img src="{{ asset('upload/productImg/ryzen.png') }}" alt="" class="w-56">
+                        </div>
+                        <div class="px-3 py-2">
+                            <div>
+                            <h4>AMD Ryzen 5 3400G</h4>
+                            <h4 class="font-medium text-green-500">Rp 2.599.000</h4>
+                            <h4>Stock: 10</h4>
+                        </div>
+                        <div class="p-2 m-2 bg-orange-500 text-center rounded-lg font-medium hover:bg-orange-600 hover:text-white">
+                            Add to cart
+                        </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-200 p-4 m-4 rounded-lg">
+                        <div>
+                            <img src="{{ asset('upload/productImg/ryzen.png') }}" alt="" class="w-56">
+                        </div>
+                        <div class="px-3 py-2">
+                            <div>
+                            <h4>AMD Ryzen 5 3400G</h4>
+                            <h4 class="font-medium text-green-500">Rp 2.599.000</h4>
+                            <h4>Stock: 10</h4>
+                        </div>
+                        <div class="p-2 m-2 bg-orange-500 text-center rounded-lg font-medium hover:bg-orange-600 hover:text-white">
+                            Add to cart
+                        </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-200 p-4 m-4 rounded-lg">
+                        <div>
+                            <img src="{{ asset('upload/productImg/ryzen.png') }}" alt="" class="w-56">
+                        </div>
+                        <div class="px-3 py-2">
+                            <div>
+                            <h4>AMD Ryzen 5 3400G</h4>
+                            <h4 class="font-medium text-green-500">Rp 2.599.000</h4>
+                            <h4>Stock: 10</h4>
+                        </div>
+                        <div class="p-2 m-2 bg-orange-500 text-center rounded-lg font-medium hover:bg-orange-600 hover:text-white">
+                            Add to cart
+                        </div>
+                        </div>
+                    </div>
                     <div class="bg-gray-200 p-4 m-4 rounded-lg">
                         <div>
                             <img src="{{ asset('upload/productImg/ryzen.png') }}" alt="" class="w-56">

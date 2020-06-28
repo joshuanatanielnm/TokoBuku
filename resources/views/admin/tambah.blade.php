@@ -24,12 +24,12 @@
                 <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="alamat" id="alamat" type="text" placeholder="Your addres">
 
                 <label class="text-grey-darker text-sm font-bold mb-2" for="notelp">Nomer Telephone Admin</label>
-                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="notelp" id="notelp" type="text" placeholder="Your Phone Number">
+                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="notelp" id="notelp" type="number" placeholder="Your Phone Number">
 
                 <label class="text-grey-darker text-sm font-bold mb-2" for="file">Foto Admin Admin</label>
                 <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="file" id="file" type="file" placeholder="Upload Your Photo">
 
-                <input type="submit" value="Simpan Data">
+                <input type="submit" value="Simpan Data" class="py-3 px-4 rounded-lg bg-green-400 font-medium ">
 
             </div>
         </form>

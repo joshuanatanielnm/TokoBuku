@@ -18,11 +18,11 @@
             </tr>
         </thead>
         <tbody>
-
+            <?php $id = 1 ?>
             @foreach($admin as $p)
             <tr>
-                <td class="border px-4 py-2">{{$p->id_admin}}</td>
-            <td class="border px-4 py-2"><img src="{{asset('upload/fotoAdmin/'.$p->foto_admin)}}" alt=""></td>
+                <td class="border px-4 py-2">{{$id}}</td>
+                <td class="border px-4 py-2"><img class="w-48" src="{{asset('upload/fotoAdmin/'.$p->foto_admin)}}" alt=""></td>
                 <td class="border px-4 py-2">{{$p->nama_admin}}</td>
                 <td class="border px-4 py-2">{{$p->alamat_admin}}</td>
                 <td class="border px-4 py-2">{{$p->notelp_admin}}</td>
@@ -32,6 +32,7 @@
                     <a href="/admin/hapus/{{ $p->id_admin }}">Hapus</a>
                 </td>
             </tr>
+            <?php $id++ ?>
             @endforeach
         </tbody>
     </table>

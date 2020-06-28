@@ -17,6 +17,12 @@ class adminController extends Controller
     	return view('admin.admin',['admin' => $admin]);
 
     }
+    public function update($id){
+        $admin = DB::table('admin')->where('id_admin', $id)->get();
+
+        return view('admin.update', ['admin' => $admin]);
+    }
+
 
     public function hapus($id){
         DB::table('admin')->where('id_admin', $id)->delete();
@@ -27,11 +33,23 @@ class adminController extends Controller
         return view('admin.tambah');
     }
 
+    public function updated(Request $request){
+
+        DB::table('admin')->where('id_admin',$request->id)->update([
+            'nama_admin' => $request->nama,
+            'alamat_admin' => $request->alamat,
+            'notelp_admin' => $request->notelp
+        ]);
+
+        return redirect('/admin');
+    }
+
 
     public function store(Request $request)
     {
         $this->validate($request, [
-            'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
+            'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+            'notelp' => 'required|numeric'
         ]);
 
         $file = $request->file('file');

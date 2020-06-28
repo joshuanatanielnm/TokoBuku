@@ -2,6 +2,7 @@
 
 //test
 //cek
+//mau isok loooo
 
 namespace App\Http\Controllers;
 

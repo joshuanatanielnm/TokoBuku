@@ -3,7 +3,6 @@
 //test
 //cek
 //mau isok loooo
-//hmmmmmm
 
 namespace App\Http\Controllers;
 

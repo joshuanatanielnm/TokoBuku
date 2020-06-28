@@ -24,39 +24,21 @@
     <div>
         <div class="flex">
             <div class="w-4/6">
-                <div class="flex bg-gray-200 p-3 rounded mt-4">
-                    <div class="mt-4">
-                        <img src="{{ asset('upload/productImg/ryzen.png') }}" alt="" class="w-56">
-                    </div>
-                    <div class="self-center ml-5">
-                        AMD Ryzen 5 3400G
-                        <br>
-                        Stock: 10
-                    <div>
-                        <input type="number" class="p-3 font-medium" value=1>
-                        <br>
-                        Price :  <span class="font-medium text-green-500">Rp 2.599.000</span>
-                    </div>
-                    <a href="" class="text-red-500">
-                        Hapus
-                    </a>
-                    </div>
-                </div>
 
                 <div class="flex bg-gray-200 p-3 rounded mt-4">
                     <div class="mt-4">
-                        <img src="{{ asset('upload/productImg/ryzen.png') }}" alt="" class="w-56">
+                        <img src="{{ asset('upload/productImg/The_Other_side__w150_hauto.jpg') }}" alt="" class="w-40">
                     </div>
                     <div class="self-center ml-5">
-                        AMD Ryzen 5 3400G
+                        <span  class="text-2xl font-medium">A Cup Of Tea</span>
                         <br>
-                        Stock: 10
+                        Gita Savitri Devi
                     <div>
-                        <input type="number" class="p-3 font-medium" value=1>
                         <br>
-                        Price :  <span class="font-medium text-green-500">Rp 2.599.000</span>
+                        <span class="font-medium text-red-400 mb-10">Stock: 10</span>
                     </div>
-                    <a href="" class="text-red-500">
+                    <br><br>
+                    <a href="" class="rounded-full px-4 py-2 mt-5  items-center bg-red-500 text-white font-medium hover:bg-red-600">
                         Hapus
                     </a>
                     </div>
@@ -66,11 +48,11 @@
 
             <div class="flex self-center ml-20 bg-gray-200 p-12 rounded">
                 <div>
-                    <span class="text-xl font-medium">Ringkasan Belanja</span>
+                    <span class="text-xl font-medium">Ringkasan Pinjaman</span>
                     <br>
-                    Total Harga :<span class="font-medium text-green-500">Rp 2.599.000</span>
+                    Dikembalikan :<span class="font-medium text-green-500">14/06/2020</span>
                     <div class="text-center p-3 bg-orange-500 mt-4 text-xl font-medium rounded cursor-pointer hover:bg-orange-600 hover:text-white">
-                        Buy
+                        Sewa
                     </div>
                 </div>
             </div>
@@ -81,23 +63,23 @@
 
     <div class="recommned-ram">
             <div class="flex h-20 mt-5">
-                <h3 class="self-center text-2xl font-medium margin-auto">Popular Processor</h3>
+                <h3 class="self-center text-2xl font-medium margin-auto">Popular Book</h3>
                 <a href="" class="self-center p-2 ml-4 font-medium bg-green-300 rounded-lg hover:bg-green-500 hover:text-white">Lihat Selengkapnya</a>
             </div>
             <div class="grid gap-4 bg-gray-300 rounded-lg lg:grid-cols-5 md:grid-cols-3">
                 @for ($i = 0; $i < 5; $i++)
                 <div class="p-4 m-4 bg-gray-200 rounded-lg">
                     <div>
-                        <img src="{{ asset('upload/productImg/ryzen.png') }}" alt="" class="w-56">
+                        <img src="{{ asset('upload/productImg/The_Other_side__w150_hauto.jpg') }}" alt="" class="w-40">
                     </div>
                     <div class="px-3 py-2">
                         <div>
-                        <h4>AMD Ryzen 5 3400G</h4>
-                        <h4 class="font-medium text-green-500">Rp 2.599.000</h4>
-                        <h4>Stock: 10</h4>
+                        <h4 class="font-medium">A Cup Of Tea</h4>
+                        <h4 class="text-xs">Gita Savitri Devi</h4>
+                        <h4 class="font-medium text-red-400">Stock: 10</h4>
                     </div>
                     <div class="p-2 m-2 font-medium text-center bg-orange-500 rounded-lg hover:bg-orange-600 hover:text-white cursor-pointer">
-                        Add to cart
+                        Sewa
                     </div>
                     </div>
                 </div>

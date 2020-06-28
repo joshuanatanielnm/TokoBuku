@@ -20,3 +20,17 @@ Route::get('/', function () {
 Route::get('/cart', function () {
     return view('cart');
 });
+
+Route::get('/login', function () {
+    return view('cart');
+});
+
+//CRUD ADMIN
+Route::get('/admin', 'adminController@index');
+Route::get('/admin/tambah', 'adminController@tambah');
+Route::get('/admin/hapus/{id}', 'adminController@hapus');
+Route::get('/admin/update/{id}', 'adminController@update');
+
+Route::post('/admin/store', 'adminController@store');
+Route::post('/admin/updated', 'adminController@updated');
+//END CRUD ADMIN

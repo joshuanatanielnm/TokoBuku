@@ -20,7 +20,6 @@
 
         .footer {
         position: absolute;
-        bottom: 0;
         width: 100%;
         height: 2.5rem;            /* Footer height */
         }
@@ -44,22 +43,24 @@
                 <div>
                     <div class="flex items-center">
                         <div class="px-3">
-                            <a href="{{ url('/cart') }}" class="flex font-medium hover:font-bold">Table Admin</a>
+                            <a href="{{ url('/admin') }}" class="flex font-medium hover:font-bold">Table Admin</a>
                         </div>
                         <div class="px-3">
-                            <a href="{{ url('/cart') }}" class="flex font-medium hover:font-bold">Table User</a>
+                            <a href="{{ url('/user') }}" class="flex font-medium hover:font-bold">Table User</a>
                         </div>
                         <div class="px-3">
-                            <a href="{{ url('/cart') }}" class="flex font-medium hover:font-bold">Table Buku</a>
+                            <a href="{{ url('/buku') }}" class="flex font-medium hover:font-bold">Table Buku</a>
                         </div>
                     </div>
                 </div>
             </nav>
-            @yield('table')
+            <div>
+                @yield('content')
+            </div>
         </div>
 
         <div class="footer ">
-            <div class="flex align-center justify-center bg-black text-white font-medium mt-5 h-10">
+            <div class="flex align-center justify-center bg-black text-white font-medium h-10">
                 This is Footer
             </div>
         </div>

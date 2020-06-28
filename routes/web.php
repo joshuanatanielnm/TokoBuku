@@ -25,6 +25,12 @@ Route::get('/login', function () {
     return view('cart');
 });
 
-Route::get('/admin', function () {
-    return view('admin.admin');
-});
+//CRUD ADMIN
+Route::get('/admin', 'adminController@index');
+Route::get('/admin/tambah', 'adminController@tambah');
+Route::get('/admin/hapus/{id}', 'adminController@hapus');
+Route::get('/admin/update/{id}', 'adminController@update');
+
+Route::post('/admin/store', 'adminController@store');
+Route::post('/admin/updated', 'adminController@updated');
+//END CRUD ADMIN

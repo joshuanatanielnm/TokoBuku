@@ -1,8 +1,6 @@
 <?php
 
-//test
-//cek
-//mau isok loooo
+//iki ngetes tok, ketokane seh isok iki ngedit kodene via visual studio
 
 namespace App\Http\Controllers;
 

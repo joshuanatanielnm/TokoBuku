@@ -26,7 +26,7 @@
                 <label class="text-grey-darker text-sm font-bold mb-2" for="file">Foto Admin Admin</label>
                 <img class="w-48" src="{{asset('upload/fotoAdmin/'.$p->foto_admin)}}" alt="">
                 <br>
-                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="file" id="file" type="file" placeholder="Upload Your Photo">
+                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="file" id="file" type="file" placeholder="Upload Your Photo" value="{{ $p->foto_admin }}">
 
                 <input type="submit" value="Simpan Data" class="py-3 px-4 rounded-lg bg-green-400 font-medium ">
 

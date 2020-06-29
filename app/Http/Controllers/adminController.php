@@ -35,10 +35,25 @@ class adminController extends Controller
 
     public function updated(Request $request){
 
+        $file = $request->file('file');
+
+        if($request->file){
+            $tujuan_upload = 'upload/fotoAdmin';
+
+            $file->move($tujuan_upload,$file->getClientOriginalName());
+
+            $image = $file->getClientOriginalName();
+        }
+        else{
+            $default = DB::table('admin')->where('id_admin', $request->id)->first();
+            $image = $default->foto_admin;
+        }
+
         DB::table('admin')->where('id_admin',$request->id)->update([
             'nama_admin' => $request->nama,
             'alamat_admin' => $request->alamat,
-            'notelp_admin' => $request->notelp
+            'notelp_admin' => $request->notelp,
+            'foto_admin' =>  $image,
         ]);
 
         return redirect('/admin');

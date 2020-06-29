@@ -9,7 +9,6 @@
         @foreach ($admin as $p)
         <form action="/admin/updated" method="post" class="flex justify-center w-2/5" enctype="multipart/form-data">
             <input type="hidden" name="id" value="{{ $p->id_admin }}">
-            <input type="hidden" name="oldfile" value="{{ $p->foto_admin }}">
 
             {{ csrf_field() }}
             <div>

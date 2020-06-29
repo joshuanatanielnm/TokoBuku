@@ -46,7 +46,7 @@
                             <a href="{{ url('/admin') }}" class="flex font-medium hover:font-bold">Table Admin</a>
                         </div>
                         <div class="px-3">
-                            <a href="{{ url('/user') }}" class="flex font-medium hover:font-bold">Table User</a>
+                            <a href="{{ url('/anggota') }}" class="flex font-medium hover:font-bold">Table Anggota</a>
                         </div>
                         <div class="px-3">
                             <a href="{{ url('/buku') }}" class="flex font-medium hover:font-bold">Table Buku</a>

@@ -33,7 +33,7 @@
                     </div>
                     <div class="flex items-center">
                         <div class="px-3">
-                            <a href="" class="flex font-medium hover:font-bold py-2 px-3 bg-red-500 text-white rounded-lg">Logout</a>
+                            <a href="/logout" class="flex font-medium hover:font-bold py-2 px-3 bg-red-500 text-white rounded-lg">Logout</a>
                         </div>
                     </div>
                 </div>

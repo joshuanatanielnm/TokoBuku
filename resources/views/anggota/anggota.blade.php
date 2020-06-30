@@ -2,6 +2,7 @@
 
 
 @section('content')
+
 <div class="flex justify-center mt-10">
     <a href="/anggota/tambah" class="font-medium p-4 rounded bg-green-400">Tambah anggota</a>
 </div>

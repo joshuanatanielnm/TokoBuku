@@ -44,3 +44,22 @@ Route::get('/anggota/update/{id}', 'anggotaController@update');
 Route::post('/anggota/store', 'anggotaController@store');
 Route::post('/anggota/updated', 'anggotaController@updated');
 //END CRUD ANGGOTA
+
+
+//CRUD Buku
+Route::get('/buku', 'bukuController@index');
+Route::get('/buku/tambah', 'bukuController@tambah');
+Route::get('/buku/hapus/{id}', 'bukuController@hapus');
+Route::get('/buku/update/{id}', 'bukuController@update');
+
+Route::post('/buku/store', 'bukuController@store');
+Route::post('/buku/updated', 'bukuController@updated');
+//END CRUD Buku
+
+
+Route::get('/formlogin', 'formController@formlogin');
+Route::get('/formsignup', 'formController@formsignup');
+
+Route::post('/login', 'formController@login');
+Route::post('/signup', 'formController@signup');
+Route::get('/logout', 'formController@logout');

@@ -7,14 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
-class formController extends Controller
+class formAdminController extends Controller
 {
     public function formlogin() {
-    	return view('formLogin');
-    }
-
-    public function formsignup() {
-    	return view('formSignup');
+    	return view('formLoginAdmin');
     }
 
     public function login(Request $request){
@@ -30,13 +26,13 @@ class formController extends Controller
             return redirect('/buku');
         }
         else{
-            return redirect('formlogin')->with('alert', 'Password atau Email anda salah');
+            return redirect('/formloginAdmin')->with('alert', 'Password atau Email anda salah');
         }
     }
 
     public function logout(){
         Session::flush();
-        return redirect('formlogin')->with('alert','Kamu sudah logout');
+        return redirect('/formloginAdmin')->with('alert','Kamu sudah logout');
     }
 
 }

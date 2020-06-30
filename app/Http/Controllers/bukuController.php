@@ -12,7 +12,7 @@ class bukuController extends Controller
 {
     public function index() {
         if(!Session::get('login')){
-            return redirect('formlogin')->with('alert','Kamu harus login dulu');
+            return redirect('formloginAdmin')->with('alert','Kamu harus login dulu');
         }
     	// mengambil data dari table buku
     	$buku = DB::table('buku')->get();

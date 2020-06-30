@@ -22,11 +22,10 @@
                     <div>{{Session::get('alert-success')}}</div>
                 </div>
             @endif
-
-
             <div class="bg-blue-100 p-8 rounded-lg shadow-lg">
                 @yield('form')
             </div>
+
         </div>
     </div>
 </body>

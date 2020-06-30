@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 use Illuminate\Http\Request;
 use File;
@@ -11,6 +12,9 @@ use File;
 class anggotaController extends Controller
 {
     public function index() {
+        if(!Session::get('login')){
+            return redirect('formloginAdmin')->with('alert','Kamu harus login dulu');
+        }
     	// mengambil data dari table anggota
     	$anggota = DB::table('anggota')->get();
 

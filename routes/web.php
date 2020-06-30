@@ -57,9 +57,14 @@ Route::post('/buku/updated', 'bukuController@updated');
 //END CRUD Buku
 
 
-Route::get('/formlogin', 'formController@formlogin');
-Route::get('/formsignup', 'formController@formsignup');
+//FORM ADMIN VALIDATION ADMIN
+Route::get('/formloginAdmin', 'formAdminController@formlogin');
+Route::post('/loginAdmin', 'formAdminController@login');
+Route::get('/logoutAdmin', 'formAdminController@logout');
+//END FORM ADMIN VALIDATION ADMIN
 
-Route::post('/login', 'formController@login');
-Route::post('/signup', 'formController@signup');
-Route::get('/logout', 'formController@logout');
+//FORM USER VALIDATION USER
+Route::get('/formloginUser', 'formUserController@formlogin');
+Route::post('/loginUser', 'formUserController@login');
+Route::get('/logoutUser', 'formUserController@logout');
+//END FORM USER VALIDATION USER

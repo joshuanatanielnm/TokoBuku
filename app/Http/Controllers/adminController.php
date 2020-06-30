@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
-
+use File;
 
 class adminController extends Controller
 {
@@ -41,6 +41,9 @@ class adminController extends Controller
             $tujuan_upload = 'upload/fotoAdmin';
 
             $file->move($tujuan_upload,$file->getClientOriginalName());
+
+            $default = DB::table('admin')->where('id_admin', $request->id)->first();
+            File::delete('upload/fotoAdmin/'.$default->foto_admin);
 
             $image = $file->getClientOriginalName();
         }

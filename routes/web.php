@@ -65,6 +65,7 @@ Route::get('/logoutAdmin', 'formAdminController@logout');
 
 //FORM USER VALIDATION USER
 Route::get('/formloginUser', 'formUserController@formlogin');
+Route::get('/formsignupUser', 'formUserController@formsignup');
 Route::post('/loginUser', 'formUserController@login');
 Route::get('/logoutUser', 'formUserController@logout');
 //END FORM USER VALIDATION USER

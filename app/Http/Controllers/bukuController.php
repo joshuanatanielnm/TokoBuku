@@ -57,10 +57,12 @@ class bukuController extends Controller
         }
 
         DB::table('buku')->where('id_buku',$request->id)->update([
-            'nama_buku' => $request->nama,
-            'alamat_buku' => $request->alamat,
-            'notelp_buku' => $request->notelp,
             'foto_buku' =>  $image,
+            'judul_buku' => $request->judul,
+            'pengarang_buku' => $request->pengarang,
+            'stok_buku' => $request->stok,
+            'kategori_buku' => $request->kategori,
+            'id_admin' => $request->idadmin,
         ]);
 
         return redirect('/buku');
@@ -70,8 +72,7 @@ class bukuController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
-            'notelp' => 'required|numeric'
+            'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
         ]);
 
         $file = $request->file('file');
@@ -81,11 +82,11 @@ class bukuController extends Controller
 
         DB::table('buku')->insert([
             'foto_buku' => $file->getClientOriginalName(),
-            'nama_buku' => $request->nama,
-            'alamat_buku' => $request->alamat,
-            'notelp_buku' => $request->notelp,
-            'username_buku' => $request->username,
-            'password_buku' => $request->password,
+            'judul_buku' => $request->judul,
+            'pengarang_buku' => $request->pengarang,
+            'stok_buku' => $request->stok,
+            'kategori_buku' => $request->kategori,
+            'id_admin' => $request->idadmin,
         ]);
 
         // alihkan halaman ke halaman pegawai

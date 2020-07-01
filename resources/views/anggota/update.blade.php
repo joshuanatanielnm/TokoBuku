@@ -1,8 +1,7 @@
 @extends('table')
 
 @section('content')
-<div class="tambah"></div>
-
+<div class="update">
     <h3 class="text-center text-xl font-medium mt-10">Update Data anggota</h3>
 
     <div class="flex justify-center mt-5">

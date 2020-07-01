@@ -30,8 +30,8 @@
 
                 <div class="flex justify-center">
                     <div>
-                        <p href="formsignup" class="">Belum punya akun?</p>
-                        <a href="" class="flex justify-center font-medium mt-2">Sign Up</a>
+                        <p class="">Belum punya akun?</p>
+                        <a href="formsignupUser" class="flex justify-center font-medium mt-2 p-2 bg-gray-100 rounded-lg">Sign Up</a>
                     </div>
                 </div>
             </div>

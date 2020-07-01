@@ -11,21 +11,20 @@
 
             {{ csrf_field() }}
             <div>
+                <label class="text-grey-darker text-sm font-bold mb-2" for="judul">Judul buku</label>
+                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="judul" id="judul" type="text" placeholder="Judul buku">
 
-                <label class="text-grey-darker text-sm font-bold mb-2" for="username">Username buku</label>
-                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="username" id="username" type="text" placeholder="Your Phone Number">
+                <label class="text-grey-darker text-sm font-bold mb-2" for="idadmin">Id admin</label>
+                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="idadmin" id="idadmin" type="text" placeholder="Id Admin" value="{{Session::get('id')}}" readonly>
 
-                <label class="text-grey-darker text-sm font-bold mb-2" for="password">Password buku</label>
-                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="password" id="password" type="password" placeholder="Your Phone Number">
+                <label class="text-grey-darker text-sm font-bold mb-2" for="pengarang">Pengarang Buku</label>
+                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="pengarang" id="pengarang" type="pengarang" placeholder="Pengarang buku">
 
-                <label class="text-grey-darker text-sm font-bold mb-2" for="nama">Nama buku</label>
-                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="nama" id="nama" type="text" placeholder="Your name">
+                <label class="text-grey-darker text-sm font-bold mb-2" for="stok">Stok</label>
+                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="stok" id="stok" type="text" placeholder="Stok buku">
 
-                <label class="text-grey-darker text-sm font-bold mb-2" for="alamat">Alamat buku</label>
-                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="alamat" id="alamat" type="text" placeholder="Your addres">
-
-                <label class="text-grey-darker text-sm font-bold mb-2" for="notelp">Nomer Telephone buku</label>
-                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="notelp" id="notelp" type="number" placeholder="Your Phone Number">
+                <label class="text-grey-darker text-sm font-bold mb-2" for="kategori">kategori buku</label>
+                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="kategori" id="kategori" type="text" placeholder="Kategori">
 
                 <label class="text-grey-darker text-sm font-bold mb-2" for="file">Foto buku</label>
                 <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="file" id="file" type="file" placeholder="Upload Your Photo">

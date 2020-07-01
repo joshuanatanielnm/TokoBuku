@@ -13,6 +13,10 @@ class formUserController extends Controller
     	return view('formLoginUser');
     }
 
+    public function formsignup(){
+        return view('formSignupUser');
+    }
+
     public function login(Request $request){
         $username = $request->username;
         $password = $request->password;

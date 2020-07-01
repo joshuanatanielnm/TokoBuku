@@ -1,5 +1,8 @@
 <?php
 
+//iki ngetes tok, ketokane seh isok iki ngedit kodene via visual studio
+//test kedua
+
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;

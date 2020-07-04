@@ -24,9 +24,8 @@ class formUserController extends Controller
         $data = DB::table('anggota')->where('username_anggota', $username)->where('password_anggota', $password)->first();
 
         if($data){
-            Session::put('id',$data->id_anggota);
+            Session::put('id_anggota', $data->id_anggota);
             Session::put('login',TRUE);
-            Session::put('hide',TRUE);
 
             return redirect('/');
         }
@@ -39,5 +38,7 @@ class formUserController extends Controller
         Session::flush();
         return redirect('/formloginUser')->with('alert','Kamu sudah logout');
     }
+
+
 
 }

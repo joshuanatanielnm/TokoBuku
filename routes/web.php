@@ -13,17 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+//USER
+Route::get('/', 'userController@index');
+Route::get('/cart/{id_buku}/{id_anggota}', 'userController@store');
+Route::get('/cart/{id}', 'userController@cart');
+Route::get('/delete/{id_buku}/{id_anggota}', 'userController@delete');
+Route::get('/cart/sewa/{id}', 'userController@sewa');
 
-Route::get('/cart', function () {
-    return view('cart');
-});
 
-Route::get('/login', function () {
-    return view('cart');
-});
+//END USER
 
 //CRUD ADMIN
 Route::get('/admin', 'adminController@index');

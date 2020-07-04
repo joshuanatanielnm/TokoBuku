@@ -20,7 +20,7 @@ class formAdminController extends Controller
         $data = DB::table('admin')->where('username_admin', $username)->where('password_admin', $password)->first();
 
         if($data){
-            Session::put('id',$data->id_admin);
+            Session::put('id_admin', $data->id_admin);
             Session::put('login',TRUE);
 
             return redirect('/buku');

@@ -15,16 +15,21 @@
                 <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="judul" id="judul" type="text" placeholder="Judul buku">
 
                 <label class="text-grey-darker text-sm font-bold mb-2" for="idadmin">Id admin</label>
-                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="idadmin" id="idadmin" type="text" placeholder="Id Admin" value="{{Session::get('id')}}" readonly>
+                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="idadmin" id="idadmin" type="text" placeholder="Id Admin" value="{{Session::get('id_admin')}}" readonly>
 
                 <label class="text-grey-darker text-sm font-bold mb-2" for="pengarang">Pengarang Buku</label>
                 <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="pengarang" id="pengarang" type="pengarang" placeholder="Pengarang buku">
 
                 <label class="text-grey-darker text-sm font-bold mb-2" for="stok">Stok</label>
-                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="stok" id="stok" type="text" placeholder="Stok buku">
+                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="stok" id="stok" type="number" placeholder="Stok buku">
 
                 <label class="text-grey-darker text-sm font-bold mb-2" for="kategori">kategori buku</label>
-                <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="kategori" id="kategori" type="text" placeholder="Kategori">
+                <select name="kategori" id="kategori" class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker">
+                    <option value="">--Pilih Kategori--</option>
+                    <option value="pengetahuan">pengetahuan</option>
+                    <option value="novel">novel</option>
+                    <option value="komik">komik</option>
+                </select>
 
                 <label class="text-grey-darker text-sm font-bold mb-2" for="file">Foto buku</label>
                 <input class="mb-3 appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="file" id="file" type="file" placeholder="Upload Your Photo">

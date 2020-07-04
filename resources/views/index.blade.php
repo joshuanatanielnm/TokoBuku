@@ -31,7 +31,6 @@
                     </div>
                     <div class="px-3 py-2">
                         <div class="h-24">
-                            <h4 class="font-medium">tes {{Session::get('id_anggota')}}</h4>
                             <h4 class="font-medium">{{$novel->judul_buku}}</h4>
                             <h4 class="text-xs">{{$novel->pengarang_buku}}</h4>
                             <h4 class="font-medium text-red-400">Stock: {{$novel->stok_buku}}</h4>
@@ -53,7 +52,7 @@
         <!-- PENGETAHUAN -->
         <div class="pengetahuan">
             <div class="flex h-20 mt-5">
-                <h3 class="self-center text-2xl font-medium margin-auto">Popular Novel</h3>
+                <h3 class="self-center text-2xl font-medium margin-auto">Popular Pengetahuan</h3>
                 <a href="" class="self-center p-2 ml-4 font-medium bg-green-300 rounded-lg hover:bg-green-500 hover:text-white">Lihat Selengkapnya</a>
             </div>
             <div class="grid gap-4 bg-gray-300 rounded-lg lg:grid-cols-5 md:grid-cols-3">
@@ -87,7 +86,7 @@
         <!-- KOMIK -->
         <div class="pengetahuan">
             <div class="flex h-20 mt-5">
-                <h3 class="self-center text-2xl font-medium margin-auto">Popular Novel</h3>
+                <h3 class="self-center text-2xl font-medium margin-auto">Popular Komik</h3>
                 <a href="" class="self-center p-2 ml-4 font-medium bg-green-300 rounded-lg hover:bg-green-500 hover:text-white">Lihat Selengkapnya</a>
             </div>
             <div class="grid gap-4 bg-gray-300 rounded-lg lg:grid-cols-5 md:grid-cols-3">

@@ -31,7 +31,7 @@ class userController extends Controller
 
         $cart = DB::table('cart')->where('id_buku', $id_buku)->count();
 
-        if($cart < 1){
+        if($cart <= $buku->count()){
             DB::table('cart')->insert([
                 'id_anggota' => $id_anggota,
                 'id_buku' => $id_buku,

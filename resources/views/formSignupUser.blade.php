@@ -6,7 +6,7 @@
 <div class="Signup">
     <h3 class="text-center text-xl font-medium">Signup</h3>
     <div class="flex justify-center">
-        <form action="/signup" method="post" class="flex justify-center" enctype="multipart/form-data">
+        <form action="/formsignupUser/store" method="post" class="flex justify-center" enctype="multipart/form-data">
 
             {{ csrf_field() }}
             <div>

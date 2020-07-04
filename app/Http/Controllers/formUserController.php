@@ -40,5 +40,31 @@ class formUserController extends Controller
     }
 
 
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+            'notelp' => 'required|numeric'
+        ]);
+
+        $file = $request->file('file');
+        $tujuan_upload = 'upload/fotoanggota';
+
+        $file->move($tujuan_upload,$file->getClientOriginalName());
+
+        DB::table('anggota')->insert([
+            'foto_anggota' => $file->getClientOriginalName(),
+            'nama_anggota' => $request->nama,
+            'alamat_anggota' => $request->alamat,
+            'notelp_anggota' => $request->notelp,
+            'username_anggota' => $request->username,
+            'password_anggota' => $request->password,
+        ]);
+
+        // alihkan halaman ke halaman pegawai
+        return redirect('/formloginUser');
+    }
+
+
 
 }

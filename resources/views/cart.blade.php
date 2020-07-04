@@ -56,7 +56,7 @@
                 <div>
                     <span class="text-xl font-medium">Ringkasan Pinjaman</span>
                     <br>
-                    Dikembalikan :<span class="font-medium text-green-500">14/06/2020</span>
+                    Dikembalikan : <span class="font-medium text-green-500">{{date('d-m-Y', strtotime('+3 days'))}}</span>
                     <div class="text-center p-3 bg-orange-500 mt-4 text-xl font-medium rounded cursor-pointer hover:bg-orange-600 hover:text-white">
                         <a href="cart/sewa/{{Session::get('id_anggota')}}">Sewa</a>
                     </div>

@@ -18,6 +18,7 @@ Route::get('/', 'userController@index');
 Route::get('/cart/{id_buku}/{id_anggota}', 'userController@store');
 Route::get('/cart/{id}', 'userController@cart');
 Route::get('/delete/{id_buku}/{id_anggota}', 'userController@delete');
+Route::get('cart/sewa/{id_buku}/{id_anggota}', 'userController@store');
 
 
 //END USER
@@ -63,6 +64,7 @@ Route::get('/logoutAdmin', 'formAdminController@logout');
 //FORM USER VALIDATION USER
 Route::get('/formloginUser', 'formUserController@formlogin');
 Route::get('/formsignupUser', 'formUserController@formsignup');
+Route::post('/formsignupUser/store', 'formUserController@store');
 Route::post('/loginUser', 'formUserController@login');
 Route::get('/logoutUser', 'formUserController@logout');
 //END FORM USER VALIDATION USER

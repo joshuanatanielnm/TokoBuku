@@ -25,7 +25,7 @@ class formUserController extends Controller
 
         if($data){
             Session::put('id_anggota', $data->id_anggota);
-            Session::put('login',TRUE);
+            Session::put('loginAnggota',TRUE);
 
             return redirect('/');
         }

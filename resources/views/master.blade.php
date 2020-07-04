@@ -23,11 +23,21 @@
                     </div>
 
                     <div class="flex items-center">
+                        @if (\Session::has('loginAnggota'))
+
                         <div class="px-3">
                             <a href="/cart/{{Session::get('id_anggota')}}" class="flex hover:font-medium"><img src="{{ asset('Icons/buy.svg') }}" alt="" class="w-10 px-2"> Cart</a>
                         </div>
+
+                        @else
+
                         <div class="px-3">
-                            @if(\Session::has('login'))
+                            <a href="/cart/1" class="flex hover:font-medium"><img src="{{ asset('Icons/buy.svg') }}" alt="" class="w-10 px-2"> Cart</a>
+                        </div>
+
+                        @endif
+                        <div class="px-3">
+                            @if(\Session::has('loginAnggota'))
                                 <div class="font-medium py-2 px-4 bg-red-500 rounded-lg text-white hover:bg-red-600 cursor-pointer">
                                     <a href="/logoutUser">logout</a>
                                 </div>

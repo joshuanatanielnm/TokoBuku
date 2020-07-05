@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 //USER
+Route::get('cart/sewa/{id_anggota}', 'userController@sewa')->name('sewa');
 Route::get('/', 'userController@index');
 Route::get('/cart/{id_buku}/{id_anggota}', 'userController@store');
 Route::get('/cart/{id}', 'userController@cart');
 Route::get('/delete/{id_buku}/{id_anggota}', 'userController@delete');
-Route::get('cart/sewa/{id_buku}/{id_anggota}', 'userController@store');
 
 
 //END USER

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Cart;
+use App\Peminjaman;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -19,9 +21,7 @@ class userController extends Controller
 
     public function cart($id){
 
-        $cart = DB::table('cart')->join('buku', 'cart.id_buku', '=', 'buku.id_buku')->join('anggota', 'cart.id_anggota', '=', 'anggota.id_anggota')->get();
-
-        $carts = $cart->where('id_anggota', $id);
+        $carts = Cart::where('id_anggota', $id)->get();
 
         return view('cart', ['carts' => $carts]);
 
@@ -50,5 +50,26 @@ class userController extends Controller
         $carts = $cart->where('id_anggota', $id_anggota);
 
         return view('/cart', ['carts' => $carts]);
+    }
+
+    // fungsi untuk sewa
+    public function sewa(Request $request)
+    {
+        DB::beginTransaction();
+        $cart = Cart::where('id_anggota', $request->id_anggota)->get();
+
+        foreach ($cart as $cart_row) {
+            Peminjaman::create([
+                'id_buku' => $cart_row->id_buku,
+                'id_anggota' => $cart_row->id_anggota,
+                'pengembalian' => date('Y-m-d', strtotime('+3 days')),
+            ]);
+        }
+
+        Cart::where('id_anggota', $request->id_anggota)->delete();
+
+        DB::commit();
+
+        return redirect()->back()->with(['success', 'Buku berhasil disewa']);
     }
 }

@@ -75,23 +75,25 @@
                 <a href="" class="self-center p-2 ml-4 font-medium bg-green-300 rounded-lg hover:bg-green-500 hover:text-white">Lihat Selengkapnya</a>
             </div>
             <div class="grid gap-4 bg-gray-300 rounded-lg lg:grid-cols-5 md:grid-cols-3">
-                @for ($i = 0; $i < 5; $i++)
+                @foreach ($novels as $novel)
                 <div class="p-4 m-4 bg-gray-200 rounded-lg">
                     <div>
-                        <img src="{{ asset('upload/productImg/The_Other_side__w150_hauto.jpg') }}" alt="" class="w-40">
+                        <img src="{{asset('upload/fotobuku/'.$novel->foto_buku)}}" alt=""  class="w-56 h-64">
                     </div>
                     <div class="px-3 py-2">
-                        <div>
-                        <h4 class="font-medium">A Cup Of Tea</h4>
-                        <h4 class="text-xs">Gita Savitri Devi</h4>
-                        <h4 class="font-medium text-red-400">Stock: 10</h4>
-                    </div>
-                    <div class="p-2 m-2 font-medium text-center bg-orange-500 rounded-lg hover:bg-orange-600 hover:text-white cursor-pointer">
-                        Sewa
-                    </div>
+                        <div class="h-24">
+                            <h4 class="font-medium">{{$novel->judul_buku}}</h4>
+                            <h4 class="text-xs">{{$novel->pengarang_buku}}</h4>
+                            <h4 class="font-medium text-red-400">Stock: {{$novel->stok_buku}}</h4>
+                        </div>
+                        <a href="{{ $novel->id_buku }}/{{Session::get('id_anggota')}}">
+                            <div class="p-2 m-2 font-medium text-center bg-orange-500 rounded-lg hover:bg-orange-600 hover:text-white cursor-pointer">
+                                Sewa
+                            </div>
+                        </a>
                     </div>
                 </div>
-                @endfor
+            @endforeach
 
             </div>
         </div>

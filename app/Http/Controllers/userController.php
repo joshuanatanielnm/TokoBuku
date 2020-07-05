@@ -21,9 +21,10 @@ class userController extends Controller
 
         $cart = DB::table('cart')->join('buku', 'cart.id_buku', '=', 'buku.id_buku')->join('anggota', 'cart.id_anggota', '=', 'anggota.id_anggota')->get();
 
+    	$novel = DB::table('buku')->where('kategori_buku', 'novel')->take(5)->get();
         $carts = $cart->where('id_anggota', $id);
 
-        return view('cart', ['carts' => $carts]);
+        return view('cart', ['carts' => $carts, 'novels'=>$novel]);
 
     }
     public function store($id_buku, $id_anggota){
@@ -47,8 +48,11 @@ class userController extends Controller
 
         $cart = DB::table('cart')->join('buku', 'cart.id_buku', '=', 'buku.id_buku')->join('anggota', 'cart.id_anggota', '=', 'anggota.id_anggota')->get();
 
+    	$novel = DB::table('buku')->where('kategori_buku', 'novel')->take(5)->get();
         $carts = $cart->where('id_anggota', $id_anggota);
 
-        return view('/cart', ['carts' => $carts]);
+        // return view('/cart', ['carts' => $carts, 'novels'=>$novel]);
+
+        return redirect('cart/'.$id_anggota);
     }
 }

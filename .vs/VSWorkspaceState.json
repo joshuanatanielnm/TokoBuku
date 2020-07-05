@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\admin",
+    "\\resources\\views\\anggota",
+    "\\resources\\views\\buku"
   ],
-  "SelectedNode": "\\.env.example",
+  "SelectedNode": "\\resources\\views\\buku\\tambah.blade.php",
   "PreviewInSolutionExplorer": false
 }

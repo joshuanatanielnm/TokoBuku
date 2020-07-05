@@ -5,13 +5,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 use Illuminate\Http\Request;
-
+use File;
 
 class adminController extends Controller
 {
     public function index() {
+        if(!Session::get('login')){
+            return redirect('formloginAdmin')->with('alert','Kamu harus login dulu');
+        }
     	// mengambil data dari table admin
     	$admin = DB::table('admin')->get();
 
@@ -37,10 +41,28 @@ class adminController extends Controller
 
     public function updated(Request $request){
 
+        $file = $request->file('file');
+
+        if($request->file){
+            $tujuan_upload = 'upload/fotoAdmin';
+
+            $file->move($tujuan_upload,$file->getClientOriginalName());
+
+            $default = DB::table('admin')->where('id_admin', $request->id)->first();
+            File::delete('upload/fotoAdmin/'.$default->foto_admin);
+
+            $image = $file->getClientOriginalName();
+        }
+        else{
+            $default = DB::table('admin')->where('id_admin', $request->id)->first();
+            $image = $default->foto_admin;
+        }
+
         DB::table('admin')->where('id_admin',$request->id)->update([
             'nama_admin' => $request->nama,
             'alamat_admin' => $request->alamat,
-            'notelp_admin' => $request->notelp
+            'notelp_admin' => $request->notelp,
+            'foto_admin' =>  $image,
         ]);
 
         return redirect('/admin');

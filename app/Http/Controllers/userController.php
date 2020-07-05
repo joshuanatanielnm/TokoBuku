@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Buku;
 use App\Cart;
 use App\Peminjaman;
 use Illuminate\Support\Facades\DB;
@@ -19,11 +20,15 @@ class userController extends Controller
     	return view('index', ['novels' => $novel, 'pengetahuans' => $pengetahuan, 'komiks' => $komik]);
     }
 
-    public function cart($id){
+    public function cart($id)
+    {
 
-        $carts = Cart::where('id_anggota', $id)->get();
+        $data = [
+            'carts' => Cart::where('id_anggota', $id)->get(),
+            'novels' => Buku::where('kategori_buku', 'novel')->get()
+        ];
 
-        return view('cart', ['carts' => $carts]);
+        return view('cart', $data);
 
     }
     public function store($id_buku, $id_anggota){
@@ -47,9 +52,12 @@ class userController extends Controller
 
         $cart = DB::table('cart')->join('buku', 'cart.id_buku', '=', 'buku.id_buku')->join('anggota', 'cart.id_anggota', '=', 'anggota.id_anggota')->get();
 
+    	$novel = DB::table('buku')->where('kategori_buku', 'novel')->take(5)->get();
         $carts = $cart->where('id_anggota', $id_anggota);
 
-        return view('/cart', ['carts' => $carts]);
+        // return view('/cart', ['carts' => $carts, 'novels'=>$novel]);
+
+        return redirect('cart/'.$id_anggota);
     }
 
     // fungsi untuk sewa

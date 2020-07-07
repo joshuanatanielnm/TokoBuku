@@ -41,7 +41,14 @@
             </tr>
             <?php $id++ ?>
             @endforeach
+
         </tbody>
     </table>
+
+<div class="list-none">
+    <div class="bg-red-400 p-4 font-medium ">
+        {{ $buku->links() }}
+    </div>
+</div>
 </div>
 @endsection

@@ -17,7 +17,7 @@ class adminController extends Controller
             return redirect('formloginAdmin')->with('alert','Kamu harus login dulu');
         }
     	// mengambil data dari table admin
-    	$admin = DB::table('admin')->get();
+    	$admin = DB::table('admin')->paginate(3);
 
     	// mengirim data admin ke view index
     	return view('admin.admin',['admin' => $admin]);

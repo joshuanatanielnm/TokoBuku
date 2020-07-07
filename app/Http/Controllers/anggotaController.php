@@ -16,7 +16,7 @@ class anggotaController extends Controller
             return redirect('formloginAdmin')->with('alert','Kamu harus login dulu');
         }
     	// mengambil data dari table anggota
-    	$anggota = DB::table('anggota')->get();
+    	$anggota = DB::table('anggota')->paginate(3);
 
     	// mengirim data anggota ke view index
     	return view('anggota.anggota',['anggota' => $anggota]);

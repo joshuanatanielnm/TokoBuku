@@ -15,7 +15,7 @@ class bukuController extends Controller
             return redirect('formloginAdmin')->with('alert','Kamu harus login dulu');
         }
     	// mengambil data dari table buku
-    	$buku = DB::table('buku')->get();
+    	$buku = DB::table('buku')->paginate(3);
 
     	// mengirim data buku ke view index
     	return view('buku.buku',['buku' => $buku]);

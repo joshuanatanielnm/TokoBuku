@@ -35,5 +35,10 @@
             @endforeach
         </tbody>
     </table>
+    <div class="list-none">
+    <div class="bg-red-400 p-4 font-medium ">
+        {{ $admin->links() }}
+    </div>
+</div>
 </div>
 @endsection

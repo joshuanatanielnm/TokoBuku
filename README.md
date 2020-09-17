@@ -1,4 +1,4 @@
-# Perpustakaan
+# Sistem Informasi Perpustakaan
 
 Project Tugas Akhir Pemrogamman Sistem Informasi
 
